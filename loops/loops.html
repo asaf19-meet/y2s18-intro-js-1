@@ -14,11 +14,25 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * Math.floor(max - min)) + min;
 }
 
+
+var win = 0
+var counter = 0
 var randomInt = getRandomInt(1, 100);
-/* END STARTING CODE */
-
-// your code goes under here
-
+while(win == 0){
+var userGuess = parseInt(prompt("guess a number"))
+if(userGuess>randomInt){
+	alert(userGuess + " is too highhh")
+	counter++
+}
+else if(userGuess<randomInt){
+	alert(userGuess + " is too lowwww")
+	counter++
+}
+else if(userGuess==randomInt){
+	alert("well done!!! you did it in " + counter + " times!")
+	win = 1
+}
+}
     </script>
 </body>
 
