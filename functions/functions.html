@@ -17,20 +17,31 @@ function isLetter(char) {
 
 // Write your isPalindrome function here!
 function isPalindrome(word){
-	word = parseInt(prompt("enter a word"))
-	var i = word.length
-	for( i > 0; i-- )
+	var z = 0;
+	for(var i = word.length-1; i > z; i--)
     {
-        if( word[i] = word.charAt(word.length)-1 )
-        {
-            alert("the word is palindrome.");
-        }else{
-            alert("the word is not palindrome!");
+
+        if (word[i] === word[z]) {
+        	answer = 'True'
         }
+        else{
+        	aswer = 'False'
+        	alert("not a palindrome")
+        	z=2
+        	i=1
+        }
+        z++;
+
+
     }
 
 }
-
+var answer;
+palindrome = prompt("enter a palindrome");
+isPalindrome(palindrome);
+if(answer=='True'){
+	alert("Palindrome!!!!");
+}
 
 
     </script>
